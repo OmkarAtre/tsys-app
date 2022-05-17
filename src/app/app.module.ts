@@ -8,6 +8,8 @@ import { FooterComponent } from './footer/footer.component';
 import { MainContainerComponent } from './main-container/main-container.component';
 import { UserListComponent } from './user-list/user-list.component';
 import { UserComponent } from './user/user.component';
+import { HighlightDirective } from './highlight.directive';
+import { ImgurlPipe } from './imgurl.pipe';
 
 @NgModule({
   declarations: [
@@ -16,7 +18,9 @@ import { UserComponent } from './user/user.component';
     FooterComponent,
     MainContainerComponent,
     UserListComponent,
-    UserComponent
+    UserComponent,
+    HighlightDirective,
+    ImgurlPipe
   ],
   imports: [
     BrowserModule,

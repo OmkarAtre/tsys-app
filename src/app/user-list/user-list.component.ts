@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { UserProfileService } from '../user-profile.service';
+import { HttpClient } from '@angular/common/http';
 
 @Component({
   selector: 'app-user-list',
@@ -8,10 +9,13 @@ import { UserProfileService } from '../user-profile.service';
 })
 export class UserListComponent implements OnInit {
 
-  constructor(private user: UserProfileService) {
-    console.log("i am in user-list");
-    let name = this.user.getCompanyName();
-    console.log(name);
+  hello:any
+
+  constructor(private http:HttpClient) {
+    this.http.get("https://reqres.in/api/users?page=2").subscribe((data)=>
+    {
+      this.hello=data
+    })
   }
 
   ngOnInit() {

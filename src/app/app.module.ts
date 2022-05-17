@@ -11,6 +11,7 @@ import { UserComponent } from './user/user.component';
 import { HighlightDirective } from './highlight.directive';
 import { ImgurlPipe } from './imgurl.pipe';
 import { ContactUsComponent } from './contact-us/contact-us.component';
+import {HttpClientModule } from '@angular/common/http'
 
 @NgModule({
   declarations: [
@@ -26,7 +27,8 @@ import { ContactUsComponent } from './contact-us/contact-us.component';
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    HttpClientModule
   ],
   providers: [],
   bootstrap: [AppComponent]

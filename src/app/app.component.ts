@@ -7,4 +7,16 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   title = 'first';
+
+  watch:number=0;
+
+  login()
+  {
+    this.watch=1;
+  }
+
+  register()
+  {
+    this.watch=2;
+  }
 }
